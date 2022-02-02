@@ -32,14 +32,14 @@ function App({ current }) {
         <Route path='/products'>
           <Products />          
         </Route>
+        <Route path='/contact'>
+          <Contact/>      
+        </Route>
         {!current ? (
             <Redirect to="/" />
           ) : (
             <Route exact path="/product/:id" component={SingleProduct} />
           )}    
-        <Route path='/contact'>
-          <Contact/>      
-        </Route>
       </Switch>
       <Footer/>
     </Router>

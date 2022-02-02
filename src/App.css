@@ -52,6 +52,9 @@ nav{
     justify-content: center;
     align-items: center;
 }
+.logo a{
+    color: #000;
+}
 .logo p{
     font-size: 2rem;
     font-weight: 800;
@@ -101,11 +104,10 @@ nav{
 
 .nav-shopping {    
     display: flex;
-    justify-content: center;
-    align-items: center;  
-    position: relative;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    height: 100%;
+
 }
 .nav-shopping .fas-icon{
     font-size: 1.5rem;
@@ -121,11 +123,21 @@ nav{
     color: #E98D04;
 }
 .nav-shopping span{
-    position: absolute;
-    bottom: -8px;
-    right: 20px;    
+    border: 1px solid rgb(197, 197, 197);
+    background: transparent;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.5s;
 }
-
+.nav-shopping span:hover{
+    background: #E98D04;
+    color: #fff;
+}
 @media screen and (max-width: 720px){
     .nav{
         width: 100%;
@@ -161,8 +173,11 @@ nav{
     .links.active{
         display: flex;
     }
+    .nav-shopping {
+        width: auto;
+    }
     .nav-shopping span{
-        right: 47%;    
+        justify-content: center;
     }
 }
 
@@ -870,8 +885,84 @@ nav{
         font-size: 0.95rem;
     }
 }
+/*Contact*/
+.contact{
+    width: 100%;
+    height: 70vh;
+    padding: 2em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact-content{
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+}
 
 
+.contact-infos{
+    margin: 2em 0;
+}
+.contact-infos p{
+    font-size: 1.5rem;    
+}
+.contact-infos p span{
+    font-weight: 700;    
+}
+
+@media screen and (max-width: 420px) {
+    .contact-header h1{
+        font-size: 1.6rem;
+    }
+    .contact-infos p{
+        font-size: 1.1rem;    
+    }
+    .contact-content{
+        width: 97%;
+    }
+}
+
+
+/*About*/
+.about{
+    width: 100%;
+    height: 100%;
+    padding: 2em 0;
+}
+.about-container{
+    width: 90%;
+    margin: 0 auto;
+}
+.about-header{
+    text-align: center;
+}
+.about-content{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.about-desc h3,.about-materiel h3{
+    text-align: center;
+    margin: 1em 0;
+}
+.about-materiel p span{
+    font-weight: 700;
+}
+
+@media screen and (max-width: 1000px) {
+    .about-content{
+        flex-direction: column;
+    }
+    .about-desc ,.about-materiel {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 750px) {
+    .about-desc p ,.about-materiel p {
+        font-size: 0.9rem;
+    }
+}
 /*Footer*/
 
 
